@@ -1,0 +1,32 @@
+baseURL = "https://ao-cyber-systems.github.io/aocyber-oss/"
+languageCode = "en-us"
+title = "AO Cyber Systems — Open Source"
+enableRobotsTXT = true
+
+[params]
+  description = "Open source projects from AO Cyber Systems."
+  githubOrg = "ao-cyber-systems"
+
+[[params.projects]]
+  name = "eden-platform-go"
+  tagline = "Core Eden platform services, written in Go."
+  repo = "https://github.com/ao-cyber-systems/eden-platform-go"
+  language = "Go"
+
+[[params.projects]]
+  name = "eden-platform-flutter"
+  tagline = "Eden platform client libraries and shared Flutter code."
+  repo = "https://github.com/ao-cyber-systems/eden-platform-flutter"
+  language = "Dart / Flutter"
+
+[[params.projects]]
+  name = "eden-ui-flutter"
+  tagline = "Eden design system and UI components for Flutter apps."
+  repo = "https://github.com/ao-cyber-systems/eden-ui-flutter"
+  language = "Dart / Flutter"
+
+[[params.projects]]
+  name = "Eden-CLI"
+  tagline = "Command-line interface for working with the Eden platform."
+  repo = "https://github.com/ao-cyber-systems/Eden-CLI"
+  language = "CLI"
