@@ -1,0 +1,16 @@
+name: aocyber-oss
+id: ari:cloud:compass:53f8835e-3a18-4994-a3e1-d88c2018a416:component/546e2675-3811-412b-8126-f0637fd7307c/9b517c9e-7d1f-4a36-af79-e35439b974e8
+description: AO Cyber Systems open source landing site
+configVersion: 1
+typeId: SERVICE
+fields:
+  tier: 4
+links:
+  - name: null
+    type: REPOSITORY
+    url: https://github.com/AO-Cyber-Systems/aocyber-oss
+relationships:
+  DEPENDS_ON: []
+labels:
+  - source:github
+customFields: null
