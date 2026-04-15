@@ -1,0 +1,20 @@
+<header id="site-nav" class="nav-bar" role="banner">
+  <nav class="nav-inner" aria-label="Primary navigation">
+    <a href="https://aocyber.ai/" class="nav-logo" aria-label="AO Cyber Systems home">
+      <img src="{{ "images/ao-icon.svg" | relURL }}" alt="" width="32" height="32" class="nav-logo-img">
+      <span class="nav-logo-text">AO Cyber Systems</span>
+    </a>
+
+    <ul class="nav-links" role="menubar">
+      <li class="nav-item" role="none">
+        <a href="{{ .Site.BaseURL }}" class="nav-link" role="menuitem">Open Source</a>
+      </li>
+      <li class="nav-item" role="none">
+        <a href="https://aocyber.ai/" class="nav-link" role="menuitem">Main Site</a>
+      </li>
+      <li class="nav-item nav-item--cta" role="none">
+        <a href="https://github.com/{{ .Site.Params.githubOrg }}" class="btn btn--gold btn--sm" role="menuitem">GitHub</a>
+      </li>
+    </ul>
+  </nav>
+</header>

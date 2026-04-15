@@ -4,29 +4,42 @@ title = "AO Cyber Systems — Open Source"
 enableRobotsTXT = true
 
 [params]
-  description = "Open source projects from AO Cyber Systems."
+  description = "Open source repositories from AO Cyber Systems — the Eden platform, SDKs, UI kits, and developer tooling."
   githubOrg = "ao-cyber-systems"
 
 [[params.projects]]
   name = "eden-platform-go"
-  tagline = "Core Eden platform services, written in Go."
+  tagline = "Core Eden platform services."
+  description = "The Go implementation of the Eden platform — services, APIs, and backend infrastructure."
   repo = "https://github.com/ao-cyber-systems/eden-platform-go"
   language = "Go"
 
 [[params.projects]]
   name = "eden-platform-flutter"
-  tagline = "Eden platform client libraries and shared Flutter code."
+  tagline = "Eden platform client libraries."
+  description = "Shared Flutter packages and client SDKs for integrating with the Eden platform."
   repo = "https://github.com/ao-cyber-systems/eden-platform-flutter"
   language = "Dart / Flutter"
 
 [[params.projects]]
   name = "eden-ui-flutter"
-  tagline = "Eden design system and UI components for Flutter apps."
+  tagline = "Eden design system for Flutter."
+  description = "UI components, design tokens, and widget library powering Eden's Flutter applications."
   repo = "https://github.com/ao-cyber-systems/eden-ui-flutter"
   language = "Dart / Flutter"
 
 [[params.projects]]
   name = "Eden-CLI"
-  tagline = "Command-line interface for working with the Eden platform."
+  tagline = "Command-line interface for Eden."
+  description = "The official CLI for interacting with the Eden platform — scaffolding, deployment, and dev workflows."
   repo = "https://github.com/ao-cyber-systems/Eden-CLI"
   language = "CLI"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false

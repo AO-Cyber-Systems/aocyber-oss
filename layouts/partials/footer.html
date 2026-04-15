@@ -1,0 +1,48 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <a href="https://aocyber.ai/" class="footer-logo" aria-label="AO Cyber Systems home">
+          <img src="{{ "images/ao-icon.svg" | relURL }}" alt="" width="32" height="32" class="nav-logo-img">
+          <span class="nav-logo-text">AO Cyber Systems</span>
+        </a>
+        <p class="footer-tagline">Open source from Brunswick, Maine.</p>
+        <address class="footer-address">
+          <a href="mailto:sales@aocyber.ai">sales@aocyber.ai</a><br>
+          <a href="mailto:partners@aocyber.ai">partners@aocyber.ai</a>
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Repositories</h3>
+        <ul class="footer-list">
+          {{ range .Site.Params.projects }}
+          <li><a href="{{ .repo }}">{{ .name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-list">
+          <li><a href="https://aocyber.ai/about/">About</a></li>
+          <li><a href="https://aocyber.ai/blog/">Blog</a></li>
+          <li><a href="https://aocyber.ai/contact/">Contact</a></li>
+          <li><a href="https://github.com/{{ .Site.Params.githubOrg }}">GitHub Org</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-list">
+          <li><a href="https://aocyber.ai/legal/privacy/">Privacy Policy</a></li>
+          <li><a href="https://aocyber.ai/legal/terms/">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ now.Year }} AOCyber. All rights reserved. Licenses per repository.</p>
+    </div>
+  </div>
+</footer>

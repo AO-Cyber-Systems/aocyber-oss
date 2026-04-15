@@ -1,26 +1,41 @@
 {{ define "main" }}
-<section class="hero">
-  <h1>Open Source at AO Cyber Systems</h1>
-  <p class="lead">We build tooling, platforms, and UI kits in the open. Explore our projects below.</p>
-</section>
 
-<section class="projects">
-  <h2>Projects</h2>
-  <div class="project-grid">
-    {{ range .Site.Params.projects }}
-    <article class="project-card">
-      <h3><a href="{{ .repo }}">{{ .name }}</a></h3>
-      <p class="tag">{{ .language }}</p>
-      <p>{{ .tagline }}</p>
-      <p><a class="repo-link" href="{{ .repo }}">View on GitHub →</a></p>
-    </article>
-    {{ end }}
+<section class="section section--hero">
+  <div class="container text-center">
+    <p class="uppercase text-gold mb-md">Open Source</p>
+    <h1 class="mb-lg">Building in the open.</h1>
+    <p class="lead">{{ .Site.Params.description }}</p>
+    <div class="mt-2xl" style="display:flex; gap: var(--space-md); justify-content:center; flex-wrap:wrap;">
+      <a href="#repositories" class="btn btn--primary btn--lg">Browse Repositories</a>
+      <a href="https://github.com/{{ .Site.Params.githubOrg }}" class="btn btn--outline btn--lg">View on GitHub</a>
+    </div>
   </div>
 </section>
 
-<section class="about">
-  <h2>About</h2>
-  <p>AO Cyber Systems develops the Eden platform — a suite of Go services and Flutter clients. Our open source repositories host the foundational libraries, SDKs, and UI components that power Eden.</p>
-  <p>For contributions, issues, or questions, head to the <a href="https://github.com/{{ .Site.Params.githubOrg }}">org on GitHub</a>.</p>
+<section id="repositories" class="section">
+  <div class="container">
+    <div class="text-center mb-3xl">
+      <p class="uppercase text-gold mb-md">Repositories</p>
+      <h2>Eden Platform &amp; Tooling</h2>
+    </div>
+
+    <div class="grid grid--2 gap-lg">
+      {{ range .Site.Params.projects }}
+        {{ partial "repo-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
 </section>
+
+<section class="section" aria-label="About">
+  <div class="container container--narrow text-center">
+    <div class="glass" style="padding: var(--space-3xl) var(--space-2xl);">
+      <p class="uppercase text-gold mb-md">About</p>
+      <h2 class="mb-lg">Privacy, Sovereignty, Trust.</h2>
+      <p class="lead mb-2xl">AO Cyber Systems develops the Eden platform — a suite of Go services and Flutter clients — alongside developer tooling. Our open source repositories host the foundational libraries, SDKs, and UI components that power our products.</p>
+      <a href="https://aocyber.ai/about/" class="btn btn--primary btn--lg">Learn More</a>
+    </div>
+  </div>
+</section>
+
 {{ end }}
